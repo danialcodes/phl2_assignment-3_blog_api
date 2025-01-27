@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ERROR_TYPE = void 0;
+exports.ERROR_TYPE = {
+    ZOD_ERROR: 'ZOD_ERROR',
+    NOT_FOUND_ERROR: 'NOT_FOUND_ERROR',
+    VALIDATION_ERROR: 'VALIDATION_ERROR',
+    AUTH_ERROR: 'AUTH_ERROR',
+    AUTHORIZATION_ERROR: 'AUTHORIZATION_ERROR',
+    INTERNAL_SERVER_ERROR: 'INTERNAL_SERVER_ERROR',
+    CONFLICT_ERROR: 'CONFLICT_ERROR',
+};
