@@ -23,7 +23,7 @@ app.get('/', (req: Request, res: Response) => {
                 <title>Blog API</title>
             </head>
             <body style='width:100vw;display:flex;justify-content:center;align-items:center'>
-                <h1 style='color:green'>Welcome to Bookshop Api</h1>
+                <h1 style='color:green'>Welcome to Blog Api</h1>
             </body>
         </html>
         `,
