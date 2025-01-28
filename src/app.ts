@@ -8,11 +8,7 @@ const app: Application = express();
 
 // parsers
 app.use(express.json());
-app.use(
-    cors({
-        origin: ['*'], // allow all origins temporarily
-    }),
-);
+app.use(cors());
 app.use(cookieParser());
 
 // default route
