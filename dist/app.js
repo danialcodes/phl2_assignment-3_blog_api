@@ -12,21 +12,11 @@ const cookie_parser_1 = __importDefault(require("cookie-parser"));
 const app = (0, express_1.default)();
 // parsers
 app.use(express_1.default.json());
-app.use((0, cors_1.default)({
-    origin: ['*'], // allow all origins temporarily
-}));
+app.use((0, cors_1.default)());
 app.use((0, cookie_parser_1.default)());
 // default route
 app.get('/', (req, res) => {
-    res.send(`<html>
-            <head>
-                <title>Blog API</title>
-            </head>
-            <body style='width:100vw;display:flex;justify-content:center;align-items:center'>
-                <h1 style='color:green'>Welcome to Blog Api</h1>
-            </body>
-        </html>
-        `);
+    res.send("<html><head><title>Bookshop API</title></head><body style='width:100vw;display:flex;justify-content:center;align-items:center'><h1 style='color:green'>Welcome to Blog Api</h1></body></html>");
 });
 // application routes
 app.use('/api', (_req, res, next) => {

@@ -13,17 +13,7 @@ app.use(cookieParser());
 
 // default route
 app.get('/', (req: Request, res: Response) => {
-    res.send(
-        `<html>
-            <head>
-                <title>Blog API</title>
-            </head>
-            <body style='width:100vw;display:flex;justify-content:center;align-items:center'>
-                <h1 style='color:green'>Welcome to Blog Api</h1>
-            </body>
-        </html>
-        `,
-    );
+    res.send("<html><head><title>Bookshop API</title></head><body style='width:100vw;display:flex;justify-content:center;align-items:center'><h1 style='color:green'>Welcome to Blog Api</h1></body></html>")
 });
 
 // application routes

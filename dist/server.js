@@ -26,16 +26,16 @@ function startServer() {
     });
 }
 startServer();
-// process.on('unhandledRejection', () => {
-//     console.log('Shutting down server due to unhandled promise rejection');
-//     if (server) {
-//         server.close(() => {
-//             process.exit(1);
-//         });
-//     }
-//     process.exit(1);
-// });
-// process.on('uncaughtException', () => {
-//     console.log('Shutting down server due to uncaughtException error');
-//     process.exit(1);
-// });
+process.on('unhandledRejection', () => {
+    console.log('Shutting down server due to unhandled promise rejection');
+    if (exports.server) {
+        exports.server.close(() => {
+            process.exit(1);
+        });
+    }
+    process.exit(1);
+});
+process.on('uncaughtException', () => {
+    console.log('Shutting down server due to uncaughtException error');
+    process.exit(1);
+});
