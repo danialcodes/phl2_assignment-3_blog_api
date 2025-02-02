@@ -44,9 +44,13 @@ class QueryBuilder<T> {
                 (this?.query?.sortBy as string)?.split(',')?.join(' ') ||
                 'createdAt';
         } else {
-            sort =
-                (this?.query?.sortBy as string)?.split(',')?.join(' ') ||
-                '-createdAt';
+            const sortQuery =
+                (this?.query?.sortBy as string)?.split(',')?.join('-')
+            if(sortQuery) {
+                sort = `-${sortQuery}`;
+            }else{
+                sort = '-createdAt';
+            }
         }
         this.modelQuery = this.modelQuery.sort(sort as string);
         return this;
