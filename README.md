@@ -4,9 +4,11 @@
 The Blog Platform Backend is a robust and secure REST API that powers a blogging system where users can create, update, and delete their blogs. The system features role-based access control, authentication, and public APIs for browsing blogs with advanced filtering and sorting capabilities.
 
 ## Live URL
-[API URL](https://phl2-ass3.danialcodes.xyz) *(hosted in vercel)*
+- [API URL](https://phl2-ass3.danialcodes.xyz) *(hosted in vercel)*
 
-[GITHUB URL](https://github.com/danialcodes/phl2_assignment-3_blog_api)
+- [GITHUB URL](https://github.com/danialcodes/phl2_assignment-3_blog_api)
+
+- [Video URL](https://youtu.be/rzpLur2-8Zk) *(Youtube)*
 
 
 ## Admin Login Crediential
