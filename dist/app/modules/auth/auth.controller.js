@@ -28,9 +28,9 @@ const loginUser = (0, asyncHandler_1.default)((req, res) => __awaiter(void 0, vo
     (0, sendResponse_1.default)(res, {
         success: true,
         statusCode: http_status_codes_1.StatusCodes.OK,
-        message: 'Login successful',
+        message: 'Successfully Logged In',
         data: {
-            accessToken,
+            token: accessToken,
         },
     });
 }));

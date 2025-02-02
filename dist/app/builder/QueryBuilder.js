@@ -40,9 +40,13 @@ class QueryBuilder {
                     'createdAt';
         }
         else {
-            sort =
-                ((_g = (_f = (_e = this === null || this === void 0 ? void 0 : this.query) === null || _e === void 0 ? void 0 : _e.sortBy) === null || _f === void 0 ? void 0 : _f.split(',')) === null || _g === void 0 ? void 0 : _g.join(' ')) ||
-                    '-createdAt';
+            const sortQuery = (_g = (_f = (_e = this === null || this === void 0 ? void 0 : this.query) === null || _e === void 0 ? void 0 : _e.sortBy) === null || _f === void 0 ? void 0 : _f.split(',')) === null || _g === void 0 ? void 0 : _g.join('-');
+            if (sortQuery) {
+                sort = `-${sortQuery}`;
+            }
+            else {
+                sort = '-createdAt';
+            }
         }
         this.modelQuery = this.modelQuery.sort(sort);
         return this;
